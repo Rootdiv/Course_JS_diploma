@@ -1,5 +1,5 @@
 {
-  "name": "Course_js_diploma",
+  "name": "course_js_diploma",
   "version": "1.0.0",
   "description": "Курс JavaScript от Glo Academy <div>   Дипломный проект </div>",
   "main": "index.js",
@@ -25,5 +25,8 @@
     "webpack": "^5.24.4",
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "fsevents": "^1.2.13"
   }
 }
