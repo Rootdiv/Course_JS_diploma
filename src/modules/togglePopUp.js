@@ -17,8 +17,7 @@ const togglePopUp = () => {
   document.body.addEventListener('click', (event) => {
     const target = event.target;
     if (target.matches('.overlay') || target.closest('.close-form')) {
-      freeVisitForm.removeAttribute('style');
-      callbackForm.removeAttribute('style');
+      target.closest('.popup').removeAttribute('style');
     }
   });
 };
