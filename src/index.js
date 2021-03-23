@@ -8,6 +8,7 @@ import validForm from './modules/validForm';
 import sendFormModal from './modules/sendFormModal';
 import sendForm from './modules/sendForm';
 import gift from './modules/gift';
+import stickyMenu from './modules/stickyMenu';
 
 adaptiveMenu();
 selectClub();
@@ -16,3 +17,4 @@ validForm();
 sendFormModal();
 sendForm();
 gift();
+stickyMenu();
