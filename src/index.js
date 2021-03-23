@@ -7,6 +7,7 @@ import togglePopUp from './modules/togglePopUp';
 import validForm from './modules/validForm';
 import sendFormModal from './modules/sendFormModal';
 import sendForm from './modules/sendForm';
+import gift from './modules/gift';
 
 adaptiveMenu();
 selectClub();
@@ -14,3 +15,4 @@ togglePopUp();
 validForm();
 sendFormModal();
 sendForm();
+gift();
