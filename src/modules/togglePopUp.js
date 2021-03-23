@@ -16,7 +16,7 @@ const togglePopUp = () => {
   });
   document.body.addEventListener('click', (event) => {
     const target = event.target;
-    if (target.matches('.overlay') || target.closest('.close-form')) {
+    if (target.matches('.overlay') || target.closest('.close-form') || target.matches('.close-btn')) {
       target.closest('.popup').removeAttribute('style');
     }
   });
