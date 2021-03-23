@@ -4,8 +4,10 @@
 const adaptiveMenu = () => {
   const menuButton = document.querySelector('.menu-button');
   const popUpMenu = document.querySelector('.popup-menu');
-  menuButton.addEventListener('click', () => {
-    popUpMenu.style.display = 'flex';
+  menuButton.addEventListener('click', (event) => {
+    if (event.target.matches('img')) {
+      popUpMenu.style.display = 'flex';
+    }
   });
   popUpMenu.addEventListener('click', (event) => {
     const target = event.target;
