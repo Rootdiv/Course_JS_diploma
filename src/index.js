@@ -10,6 +10,7 @@ import sendForm from './modules/sendForm';
 import gift from './modules/gift';
 import stickyMenu from './modules/stickyMenu';
 import arrowTop from './modules/arrowTop';
+import scrollFooterMenu from './modules/scrollFooterMenu';
 
 adaptiveMenu();
 selectClub();
@@ -20,3 +21,4 @@ sendForm();
 gift();
 stickyMenu();
 arrowTop();
+scrollFooterMenu();
