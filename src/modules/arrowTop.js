@@ -1,4 +1,4 @@
-//Появление стрелки
+//Появление стрелки + анимация при клике по стрелки
 'use strict';
 
 const arrowTop = () => {
@@ -12,6 +12,16 @@ const arrowTop = () => {
     } else {
       arrow.style.display = 'none';
     }
+  });
+  const backToTop = () => {
+    if (window.pageYOffset > 0) {
+      window.scrollBy(0, -15);
+      setTimeout(backToTop, 1);
+    }
+  };
+  arrow.addEventListener('click', (event) => {
+    event.preventDefault();
+    backToTop();
   });
 };
 
