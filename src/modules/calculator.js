@@ -7,6 +7,7 @@ const calculator = () => {
   const cardTime = document.querySelector('.time');
   const cardType = document.querySelector('label[for^="m"]').textContent;
   const clubName = document.querySelector('input[name="club-name"]').value;
+  const code = document.querySelector('input[name="code"]');
   const getPrice = (url, card) => {
     fetch(`./${url}.html`).then(response => response.text()).then(responseText => {
       const page = new DOMParser().parseFromString(responseText, 'text/html');
@@ -18,7 +19,12 @@ const calculator = () => {
         if (long === card && isSolo) {
           const cost = element.querySelector('.cost').textContent;
           const price = parseInt(cost);
-          priceTotal.textContent = price;
+          if (code.value === 'ТЕЛО2020') {
+            const percent = parseInt(cost) / 100 * 30;
+            priceTotal.textContent = price - Math.ceil(percent);
+          } else {
+            priceTotal.textContent = price;
+          }
         }
       }
     });
