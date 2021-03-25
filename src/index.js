@@ -13,6 +13,7 @@ import arrowTop from './modules/arrowTop';
 import scrollFooterMenu from './modules/scrollFooterMenu';
 import calculator from './modules/calculator';
 import headerSlider from './modules/headerSlider';
+import slider from './modules/slider';
 
 adaptiveMenu();
 selectClub();
@@ -26,3 +27,4 @@ arrowTop();
 scrollFooterMenu();
 calculator();
 headerSlider();
+slider();
