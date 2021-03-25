@@ -11,14 +11,16 @@ import gift from './modules/gift';
 import stickyMenu from './modules/stickyMenu';
 import arrowTop from './modules/arrowTop';
 import scrollFooterMenu from './modules/scrollFooterMenu';
+import calculator from './modules/calculator';
 
 adaptiveMenu();
 selectClub();
 togglePopUp();
-validForm();
+window.onload = validForm();
 sendFormModal();
 sendForm();
 gift();
 stickyMenu();
 arrowTop();
 scrollFooterMenu();
+calculator();
