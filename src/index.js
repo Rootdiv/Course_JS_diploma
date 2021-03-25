@@ -12,6 +12,7 @@ import stickyMenu from './modules/stickyMenu';
 import arrowTop from './modules/arrowTop';
 import scrollFooterMenu from './modules/scrollFooterMenu';
 import calculator from './modules/calculator';
+import headerSlider from './modules/headerSlider';
 
 adaptiveMenu();
 selectClub();
@@ -24,3 +25,4 @@ stickyMenu();
 arrowTop();
 scrollFooterMenu();
 calculator();
+headerSlider();
