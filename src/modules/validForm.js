@@ -6,21 +6,30 @@ const validForm = () => {
   const formNameInput = (event) => {
     const target = event.target;
     target.value = target.value.replace(/[^а-яё\s]/gi, '');
+    if (target.value.length < 2) {
+      target.style.border = '5px solid #FF0000';
+    } else {
+      target.removeAttribute('style');
+    }
   };
   const formNameBlur = (event) => {
     const target = event.target;
-    target.value = target.value.split(/\s+/)
-      .map(str => str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()).join(' ')
-      .trim();
+    if (target.value.length < 2) {
+      target.value = '';
+      target.removeAttribute('style');
+    } else {
+      target.value = target.value.split(/\s+/)
+        .map(str => str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()).join(' ')
+        .trim();
+    }
   };
   const formePhoneInput = (event) => {
     const target = event.target;
     target.value = target.value.replace(/[^\+\d]/g, '');
-    if (target.value.charAt(0) !== '+' || target.value.charAt(1) !== '7') {
-      target.value = '+7';
-    }
     if (target.value.length > 12) {
       target.value = target.value.substring(0, 12);
+    } else if (target.value.charAt(0) !== '+' || target.value.charAt(1) !== '7') {
+      target.value = '+7';
     }
   };
   const formPhoneBlur = (event) => {
