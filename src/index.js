@@ -14,6 +14,7 @@ import scrollFooterMenu from './modules/scrollFooterMenu';
 import calculator from './modules/calculator';
 import headerSlider from './modules/headerSlider';
 import slider from './modules/slider';
+import sliderCarousel from './modules/sliderCarousel';
 
 adaptiveMenu();
 selectClub();
@@ -28,3 +29,4 @@ scrollFooterMenu();
 calculator();
 headerSlider();
 slider();
+sliderCarousel();
